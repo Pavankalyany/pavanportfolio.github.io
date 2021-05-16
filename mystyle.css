@@ -1,0 +1,273 @@
+body{
+	background-color:white;
+	color:black;
+	margin:0px;
+	font-family: sans-serif;
+	line-height:1.6;
+
+
+}
+
+section{
+	padding:5em 2em;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+strong{
+	font-weight: bold;
+}
+
+.btn{
+	display:inline-block;
+	padding: .5em 2.5em;
+	background:#66ffcc;
+	color:black;
+	cursor: pointer;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight:bolder;
+	font-style:none;
+	transition: transform 200ms ease-in-out;
+	text-decoration: none;
+}
+.btn:hover{
+	transform:scale(1.1);
+}
+
+h1,h2,h3{
+	line-height: 1.1;
+	margin:0;
+}
+h1{font-size: 3em;}
+h2{
+	font-size: 2.25em;
+}
+h3{
+	font-size: 1.25em;
+}
+
+.section-title{
+margin-bottom: .25em;
+}
+
+.section-subtitle{
+	margin:0;
+	font-size:1.25em;
+}
+.section-subtitle_intro,
+.section-subtitle_about{
+	background-color: #66ffcc;
+	font-family:monospace;
+	margin-bottom: 1em;
+	padding:.25em 1em;
+}
+.section-title--intro strong{
+	display:block;
+}
+
+
+.intro{
+	position: relative;
+}
+.intro_image{
+	box-shadow:0.25em 0.75em rgba(0,0,0,0.25);
+	box-shadow: 0.125em 0.25em rgba(0,0,0,0.15);
+}
+.section-subtitle_intro{
+	display: inline-block;
+}
+@media(min-width:600px){
+.intro{
+	display: grid;
+	width: min-content;
+	margin:0 auto;
+	grid-column-gap: 1em;
+	grid-template-areas:
+	"img title"
+	"img subtitle";
+	grid-template-columns: min-content max-content;
+}	
+.intro_image{
+	grid-area: img;
+	min-width: 250px;
+	position: relative;
+	z-index: 2;
+}
+.section-subtitle_intro{
+	align-self: start;
+	grid-column:-1/1;
+	grid-row: 2;
+	text-align: right;
+	position: relative;
+	left: -1.5em;
+	width:calc(100% +1.5em);
+}
+}
+
+
+.my-services{
+	
+	background-size: cover;
+	background-blend-mode: multiply;
+	color:white;
+	background-color: black;
+    text-align: center;
+
+}
+.section-title--services{
+	color:#66ffcc;
+	position: relative;
+}
+.section-title--services::after{
+
+	content: '';
+	display:block;
+	width: 25%;
+	height: 1px;
+    margin:0.5em auto 1em;
+    background:currentColor;
+
+}
+
+.Services{
+	margin-bottom: 2em;
+
+}
+.service{
+	max-width: 500px;
+	margin:0 auto;
+}
+@media(min-width: 800px){
+	.Services{
+		display:flex;
+		max-width: 1000px;
+		margin:0 auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.service+.service{
+		margin-left:2em;
+
+	}
+}
+.about-me{
+max-width: 1000px;
+margin:0 auto;
+
+}
+.abt-me-img{
+	box-shadow:0.25em 0.75em rgba(0,0,0,0.25); 
+	box-shadow: 0.125em 0.25em rgba(0,0,0,0.15);
+}
+@media(min-width: 600px){
+	.about-me {
+		display: grid;
+		
+		grid-template-areas: 
+		"title img"
+		"subtitle img"
+		"text img"
+		
+	}
+	.section-title--about
+	{
+		grid-area:title;
+	}
+	.section-subtitle_about{
+		grid-column: 1/-1;
+		grid-row:2;
+		position: relative;
+		left: -1em;
+		width: calc(100%+2em);
+		padding-left:1em;
+		padding-right: calc(200px+4em);
+
+	}
+	.abt-me-img{
+		grid-area: img;
+		position: relative;
+		z-index: 2;
+
+	}
+}
+
+.my-work{
+	background-color:slategrey;
+	color:white;
+	text-align: center;
+}
+.section-subtitle-work{
+	color:#111;
+	font-weight: bold;
+	margin-bottom:1em;
+}
+.portfolio{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+
+}
+.portfolio_item{
+	
+	overflow: hidden;
+    
+
+     
+     }
+.portfolio_img{
+	transition:transform 750ms cubic-bezier(-5,0,-5,1),
+	opacity:250ms linear;
+	background-size: cover;
+	
+    float:left;
+
+}
+
+.portfolio_img:hover
+{
+	transform: scale(1.2);
+	opacity:.5;
+
+}
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+i{
+	font-family: fontawesome;
+}
+
+.footer{
+	background:#111;
+	color:#66ffcc;
+	text-align:center;
+	padding:2.5em 0;
+	font-size: 1.25em; 
+}
+
+.footer a{
+	color: inherit;
+}
+.footer_link{
+	font-weight:bold;
+}
+
+}
+.footer_link{
+	text-decoration: none;
+}
+.social-list{
+	list-style: none;
+	display: flex;
+	justify-content:center;
+	margin: 2em 0 0;
+	padding:0;  
+}
+.social-list-link{
+	margin:0 0.5em; 
+
+}
+
+
+
+
+
+
